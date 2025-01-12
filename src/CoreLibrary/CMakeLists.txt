@@ -19,3 +19,10 @@ set_target_properties(MyLibrary PROPERTIES
     LIBRARY_OUTPUT_DIRECTORY ${CMAKE_BINARY_DIR}/bin
     ARCHIVE_OUTPUT_DIRECTORY ${CMAKE_BINARY_DIR}/bin
 )
+# Link spdlog to your target
+target_link_libraries(MyLibrary spdlog::spdlog glfw OpenGL::GL)
+
+# pre-compile header file
+set(PCH_FILE pch.h)
+target_precompile_headers(${PROJECT_NAME} PRIVATE ${PCH_FILE})
+

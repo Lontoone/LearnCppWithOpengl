@@ -10,3 +10,5 @@
 #else
 	#error Only support Windows
 #endif // TE_PLATFORM_WINDOES
+
+#define BIT(x) (1<<x)
