@@ -1,6 +1,7 @@
 #pragma once
 
 //#include <memory>
+#include <spdlog/fmt/ostr.h>
 #include "spdlog/spdlog.h"
 #include "core/Core.h"
 class TE_API Log {

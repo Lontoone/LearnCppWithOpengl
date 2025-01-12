@@ -54,7 +54,7 @@ public:
 
 	EVENT_CLASS_TYPE(KeyReleased)
 };
-
+/*
 class KeyTypedEvent : public KeyEvent
 {
 public:
@@ -70,4 +70,5 @@ public:
 
 	EVENT_CLASS_TYPE(KeyTyped)
 	};
+*/
 
