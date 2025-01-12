@@ -47,3 +47,16 @@ target_link_libraries(MyLibrary spdlog::spdlog glfw OpenGL::GL glad)
 set(PCH_FILE pch.h)
 target_precompile_headers(${PROJECT_NAME} PRIVATE ${PCH_FILE})
 
+#==========================
+#		Imgui
+#==========================
+target_sources(${PROJECT_NAME} PRIVATE
+    "${imgui_SOURCE_DIR}/imgui.cpp"
+    "${imgui_SOURCE_DIR}/imgui_draw.cpp"
+    "${imgui_SOURCE_DIR}/imgui_tables.cpp"
+    "${imgui_SOURCE_DIR}/imgui_widgets.cpp"
+    "${imgui_SOURCE_DIR}/backends/imgui_impl_opengl3.cpp"
+    "${imgui_SOURCE_DIR}/backends/imgui_impl_glfw.cpp"
+	)
+target_include_directories(${PROJECT_NAME} PRIVATE ${imgui_SOURCE_DIR}/backends)
+target_include_directories(${PROJECT_NAME} SYSTEM PUBLIC "${imgui_SOURCE_DIR}")

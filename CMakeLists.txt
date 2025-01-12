@@ -24,6 +24,12 @@ FetchContent_MakeAvailable(glfw)
 #==========================
 #		Imgui
 #==========================
+FetchContent_Declare(imgui
+    GIT_REPOSITORY "https://github.com/ocornut/imgui.git"
+    GIT_TAG "v1.91.0-docking"
+    GIT_SHALLOW ON)
+FetchContent_MakeAvailable(imgui)
+
 
 
 # Add the spdlog submodule directory

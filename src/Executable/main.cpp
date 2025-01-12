@@ -10,7 +10,10 @@ public :
 
 class Sandbox : public Application {
 public:
-	Sandbox() { PushLayer(new ExampleLayer()); };
+	Sandbox() { 
+        PushLayer(new ExampleLayer()); 
+        PushOverlay(new ImGuiLayer());
+        };
     ~Sandbox() {};
 };
 
