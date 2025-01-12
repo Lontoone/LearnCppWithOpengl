@@ -1,4 +1,6 @@
 #include "pch.h"
+#include "glad/glad.h"
+#include <GLFW/glfw3.h>
 #include "WindowsWindow.h"
 
 #include "core/events/ApplicationEvent.h"
@@ -66,6 +68,10 @@ void WindowsWindow::Init(const WindowProps& props)
 		nullptr,
 		nullptr);
 	glfwMakeContextCurrent(m_Window);
+	
+	int status = gladLoadGLLoader( (GLADloadproc)glfwGetProcAddress);
+	assert(status && "Failed to init glad");
+    
 	glfwSetWindowUserPointer(m_Window , &m_Data);
 	SetVSync(true);
 	

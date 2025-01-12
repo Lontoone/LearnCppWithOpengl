@@ -21,6 +21,11 @@ FetchContent_Declare(
 # Make GLFW available
 FetchContent_MakeAvailable(glfw)
 
+#==========================
+#		Imgui
+#==========================
+
+
 # Add the spdlog submodule directory
 add_subdirectory(external/spdlog)
 

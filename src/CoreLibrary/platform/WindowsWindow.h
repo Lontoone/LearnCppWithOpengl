@@ -1,7 +1,10 @@
 #pragma once
 
 #include "core/Windows.h"
-#include <GLFW/glfw3.h>
+#include "glad/glad.h"
+//#include <GLFW/glfw3.h>
+
+struct GLFWwindow;
 
 class WindowsWindow : public Window
 {

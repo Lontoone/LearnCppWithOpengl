@@ -1,28 +1,19 @@
-/*
-#include "MyLibrary.h"
-
-int main() {
-    MyLibrary lib;
-    lib.hello();
-    return 0;
-}
-*/
 #include <TinyEngine.h>
+
+class ExampleLayer : public Layer {
+public :
+	ExampleLayer() :Layer("example") {}
+	void OnUpdate()override {TE_INFO("example layer updated");}
+	void OnEvent(Event& event) override {TE_TRACE("{0}" , event.ToString());}
+
+};
+
 class Sandbox : public Application {
 public:
-    Sandbox() {};
+	Sandbox() { PushLayer(new ExampleLayer()); };
     ~Sandbox() {};
 };
 
-/*
-int main() {
-    Sandbox* sandbox = new Sandbox();
-    sandbox->Run();
-    delete sandbox;
-
-    return 0;
-}
-*/
 
 Application* CreateApplication() {
     return new Sandbox();

@@ -1,6 +1,7 @@
 #pragma once
 #include "Core.h"
 #include "Windows.h"
+#include "core/LayerStack.h"
 #include "events/Event.h"
 #include "events/ApplicationEvent.h"
 
@@ -13,6 +14,10 @@ public:
 	void Run();
 	void OnEvent(Event& e);
 
+	void PushLayer(Layer* layer);
+	void PushOverlay(Layer* layer);
+
+
 	// To be defined in client
 	Application* CreateApplication();
 private:
@@ -20,5 +25,6 @@ private:
 
 	std::unique_ptr<Window> m_Window;
 	bool m_running = true;
+	LayerStack m_LayerStack;
 };
 
