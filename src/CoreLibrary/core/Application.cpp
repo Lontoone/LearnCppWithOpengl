@@ -63,6 +63,7 @@ void Application::PushLayer(Layer* layer)
 void Application::PushOverlay(Layer* layer)
 {
 	m_LayerStack.PushOverlay(layer);
+	layer->OnAttach();
 }
 
 bool Application::onWindowClosed(WindowCloseEvent& e)

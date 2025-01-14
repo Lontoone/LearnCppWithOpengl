@@ -3,7 +3,7 @@
 class ExampleLayer : public Layer {
 public :
 	ExampleLayer() :Layer("example") {}
-	void OnUpdate()override {TE_INFO("example layer updated");}
+	void OnUpdate()override { /*TE_INFO("example layer updated");*/ }
 	void OnEvent(Event& event) override {TE_TRACE("{0}" , event.ToString());}
 
 };

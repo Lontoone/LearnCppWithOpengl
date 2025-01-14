@@ -12,3 +12,5 @@
 #endif // TE_PLATFORM_WINDOES
 
 #define BIT(x) (1<<x)
+
+#define TE_BIND_EVENT_FN(fn) std::bind(&fn, this, std::placeholders::_1)
